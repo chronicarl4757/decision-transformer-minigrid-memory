@@ -1,0 +1,41 @@
+[project]
+name = "decision-transformer-memory"
+version = "0.1.0"
+description = "Course reproduction of Decision Transformer on MiniGrid Memory."
+requires-python = ">=3.12"
+dependencies = [
+    "gymnasium[classic-control]>=1.1.1",
+    "matplotlib>=3.9.0",
+    "minigrid>=2.3.0",
+    "numpy>=2.0.0",
+    "pandas>=2.2.0",
+    "torch==2.5.1",
+    "tqdm>=4.66.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.0",
+    "ruff>=0.8.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.uv.sources]
+torch = [
+    { index = "pytorch-cpu" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true

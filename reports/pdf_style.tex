@@ -1,0 +1,102 @@
+\usepackage{xeCJK}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs,longtable,array}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{colortbl}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,positioning,fit,backgrounds,calc}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+\definecolor{DTBlue}{HTML}{1F4E79}
+\definecolor{DTGray}{HTML}{F3F5F7}
+\definecolor{DTText}{HTML}{222222}
+
+\setmainfont{TeX Gyre Termes}
+\setsansfont{TeX Gyre Heros}
+\setmonofont{DejaVu Sans Mono}
+\setCJKmainfont{Noto Serif CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\setCJKmonofont{Noto Sans Mono CJK SC}
+
+\linespread{1.18}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.25em}
+\setlength{\emergencystretch}{3em}
+\sloppy
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=DTBlue,
+  urlcolor=DTBlue,
+  citecolor=DTBlue
+}
+
+\pretitle{\begin{center}\sffamily\bfseries\LARGE\color{DTBlue}}
+\posttitle{\par\end{center}\vspace{0.2em}}
+\preauthor{\begin{center}\sffamily\large}
+\postauthor{\end{center}}
+\predate{\begin{center}\sffamily\small}
+\postdate{\end{center}\vspace{0.8em}\hrule\vspace{1.0em}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\sffamily\small 动态规划课程期末项目}
+\fancyhead[R]{\sffamily\small Decision Transformer}
+\fancyfoot[C]{\sffamily\small \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\titleformat{\section}
+  {\sffamily\Large\bfseries\color{DTBlue}}
+  {\thesection}{0.8em}{}
+\titleformat{\subsection}
+  {\sffamily\large\bfseries\color{DTText}}
+  {\thesubsection}{0.8em}{}
+\titlespacing*{\section}{0pt}{1.1em}{0.5em}
+\titlespacing*{\subsection}{0pt}{0.8em}{0.35em}
+
+\setlist[itemize]{itemsep=0.2em, topsep=0.3em, leftmargin=2em}
+\setlist[enumerate]{itemsep=0.2em, topsep=0.3em, leftmargin=2em}
+
+\captionsetup{
+  font=small,
+  labelfont=bf
+}
+
+\lstset{
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  frame=single,
+  backgroundcolor=\color{DTGray},
+  rulecolor=\color{DTGray},
+  xleftmargin=0.8em,
+  xrightmargin=0.8em,
+  columns=fullflexible
+}
+
+\renewcommand{\arraystretch}{1.18}
+
+% Algorithm style
+\algrenewcommand\algorithmicrequire{\textbf{Input:}}
+\algrenewcommand\algorithmicensure{\textbf{Output:}}
+\floatstyle{plain}
+\restylefloat{algorithm}
+
+% Table colors
+\definecolor{tabblue}{HTML}{1F4E79}
+\definecolor{tabgray}{HTML}{F3F5F7}
+
+% TikZ defaults
+\tikzset{every picture/.style={line width=0.3pt}}
