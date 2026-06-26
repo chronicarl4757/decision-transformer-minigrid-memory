@@ -22,3 +22,5 @@ Project_0952.docx
 # Distribution export directories (keep only .zip)
 dist/final_project_public_share/
 dist/final_project_public_share */
+
+dist/*
